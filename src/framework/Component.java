@@ -3,11 +3,11 @@ package framework;
 
 public abstract class Component implements Runnable{
 
-	TestLogger test_logger;
-	Thread this_thread;
-	CompBehavior c_behavior;
-	CompIF c_if;
-	boolean stop_flag=false;
+	public TestLogger test_logger;
+	public Thread this_thread;
+	public CompBehavior c_behavior;
+	public CompIF c_if;
+	public boolean stop_flag=false;
 	
 	
 	public synchronized void set_logger(TestLogger test_logger){

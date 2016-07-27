@@ -4,27 +4,26 @@ import java.util.HashMap;
 
 public abstract class TestEnvironment{
 
-	HashMap<String,Object> env_value;
-	HashMap<String,String> env_type;
-
+	HashMap<String, java.lang.Class<Object>> type_mapping;
+	HashMap<String,Object> value_mapping;
+	
 	public TestEnvironment(){
 		
 		
 	}
 	
-	void set_type(String var, String type){
-		if (env_type.get(var) != null && !env_type.get(var).equals(type)){
-			
+	void init_var(String var, java.lang.Class<Object> type){
+		if (type_mapping.get(var) != null && !type_mapping.get(var).equals(type)){
+			System.out.println("Fatal Error - type mismatch");
+			System.exit(-1);
 		}
 		
-		env_type.put(var,  type);
+		type_mapping.put(var, type);
 	}
 	
-	void set_value(String var, Object o){
-		env.put(key, value);
+	void assign_var(String var, Object o){
+		this.value_mapping.put(var,  o);
 	}
-
-	
 	
 	
 }

@@ -16,4 +16,8 @@ public class CompBehavior {
 		this.state_list.add(s);
 	}
 	
+	public void add_transition(Transition t){
+		this.transition_list.add(t);
+	}
+	
 }
