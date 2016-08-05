@@ -8,7 +8,8 @@ public class CompBehavior {
 	private LinkedList<Transition> transition_list;
 
 	public CompBehavior (){
-		
+		this.state_list = new LinkedList<State>();
+		this.transition_list = new LinkedList<Transition>();
 		
 	}
 	
